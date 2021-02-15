@@ -13,9 +13,13 @@
     "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "baseUrl": "./",
+    "rootDir": ".",
+    "baseUrl": ".",
     "sourceMap": true,
-    "rootDir": "src"
+    "paths": {
+      "frontend/*": ["*", "src/frontend/*"],
+      "backend/*": ["*", "src/backend/*"]
+    }
   },
   "include": ["./**/*.ts*", "./**/*.js", "./.eslintrc.js"],
   "exclude": ["node_modules", "public"],

@@ -18,8 +18,8 @@ module.exports = {
   },
   extends: [
     "airbnb-typescript",
-    "plugin:jest/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:jest/recommended",
     "prettier",
     "prettier/react",
     "prettier/@typescript-eslint",
