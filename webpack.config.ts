@@ -44,6 +44,10 @@ const webpackConfig: Configuration = {
     new DotEnvPlugin(),
     new HtmlWebpackPlugin({ template: "src/frontend/index.html" }),
   ],
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+  },
 };
 
 export default webpackConfig;
