@@ -36,6 +36,11 @@ module.exports = {
     "consistent-return": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "react/prop-types": "off",
-    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { argsIgnorePattern: "^_$" },
+    ],
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/indent": "off",
   },
 };
