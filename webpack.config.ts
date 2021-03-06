@@ -9,7 +9,9 @@ const webpackConfig: Configuration = {
   entry: "./src/frontend/index.tsx",
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
-    plugins: [new TsconfigPathsPlugin() as any],
+    plugins: [
+      new TsconfigPathsPlugin({ configFile: "tsconfig.build.json" }) as any,
+    ],
   },
   output: {
     path: path.join(__dirname, "/public"),
@@ -29,7 +31,7 @@ const webpackConfig: Configuration = {
         test: /\.tsx?$/,
         loader: "ts-loader",
         options: {
-          configFile: path.resolve(__dirname, "./tsconfig.json"),
+          configFile: path.resolve(__dirname, "./tsconfig.build.json"),
         },
         exclude: /public/,
       },

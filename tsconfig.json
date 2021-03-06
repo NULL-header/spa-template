@@ -22,8 +22,5 @@
     }
   },
   "include": ["./**/*.ts*", "./**/*.js", "./**/.*.ts", "./**/.*.js"],
-  "exclude": ["node_modules", "public"],
-  "ts-node": {
-    "files": true
-  }
+  "exclude": ["node_modules", "public"]
 }

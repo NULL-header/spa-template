@@ -13,12 +13,15 @@ const webpackConfig: Configuration = {
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
-    plugins: [new TsconfigPathsPlugin() as any],
+    plugins: [
+      new TsconfigPathsPlugin({ configFile: "tsconfig.build.json" }) as any,
+    ],
   },
   output: {
     path: path.join(__dirname, "/public"),
     filename: "bundle.js",
     publicPath: "/",
+    pathinfo: false,
   },
   devtool: "inline-source-map",
   target: "web",
@@ -34,7 +37,7 @@ const webpackConfig: Configuration = {
         test: /\.tsx?$/,
         loader: "ts-loader",
         options: {
-          configFile: path.resolve(__dirname, "./tsconfig.json"),
+          configFile: "tsconfig.build.json",
         },
         exclude: /public/,
       },
