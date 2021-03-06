@@ -16,12 +16,10 @@ module.exports = {
     es6: true,
     browser: true,
   },
-  plugins: ["@typescript-eslint"],
   extends: [
     "airbnb-typescript",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jest/recommended",
     "prettier",
   ],
@@ -42,5 +40,9 @@ module.exports = {
     ],
     "@typescript-eslint/comma-dangle": "off",
     "@typescript-eslint/indent": "off",
+    "react/jsx-indent": "off",
+    "react/require-default-props": "off",
+    "func-names": "off",
+    "react/jsx-props-no-spreading": "off",
   },
 };
